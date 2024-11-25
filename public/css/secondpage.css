@@ -1,0 +1,242 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Root Variables */
+:root {
+    --primary-color: #00080d;
+    --secondary-color: #07203f;
+    --text-dark: #f1b100;
+    --text-light: #0084ff;
+    --max-width: 1200px;
+    --white: #ffffff;
+    --bg: rgb(255, 255, 255);
+    --header-font: "Playfair Display", serif;
+    --button-bg: #3ec3fd;
+    --button-hover-bg: #218838;
+    --popup-bg: rgba(0, 0, 0, 0.7);
+}
+
+/* Body Styles */
+body {
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top: 60px;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(
+        rgba(15, 26, 44, 0.5),
+        rgba(15, 26, 44, 0.5)
+    ), url("../Images/HALLWAYIMAGE.jpg");
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.header-text {
+    color: var(--white);
+    font-family: var(--header-font);
+    font-size: 24px;
+}
+
+.back-button {
+    background-color: var(--button-bg);
+    color: var(--white);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Container Styles */
+.container {
+    padding: 80px 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Room Container and Slider Styles */
+.room__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+
+.prev { left: 25px; }
+.next { right: 25px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Room Card Styles */
+.room__card {
+    width: 100%;
+    max-width: 300px; /* Adjust the width for each card */
+    padding: 20px;
+    margin: 0 10px; /* Add spacing between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room__card img {
+    max-height: 250px;
+    width: auto;
+    object-fit: cover;
+}
+
+.room__summary, .room__more-details {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.room__summary h4 {
+    font-size: 20px;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+}
+
+.room__more-details p {
+    color: var(--text-light);
+}
+
+.room__more-details h3 {
+    color: var(--text-dark);
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Available Rooms List */
+.room__list-inside h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+/* Button Styles */
+.room-btn, .butt {
+    background-color: var(--button-bg);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.room-btn:hover, .butt:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Popup Styles */
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--popup-bg);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .room__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .room__card {
+        margin: 10px 0;
+        width: 90%;
+    }
+
+    .container {
+        padding: 80px 1rem 1rem;
+    }
+
+    .room-btn, .butt {
+        width: 100%;
+    }
+
+    .slider-wrapper {
+        padding: 0;
+    }
+}
