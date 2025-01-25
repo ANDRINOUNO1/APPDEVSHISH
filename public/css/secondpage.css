@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+.containing{
+  margin: 30px;
+  display: flex;
+}
+.room__container {
+  max-width: 700px; /* Ensure it doesn’t grow too large */
+}
+.containerleft{
+  justify-content: c;
+  height: 100%;
+  width: 70%;
+  float: left;
+}
+.containerright{
+  height: 100%;
+  width: 30%;
+  float: right;
+}
+.butt {
+  width: 40%;
+  background-color: #00000057;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.butt:hover {
+  background-color: #000d57;
+  color: #ffd900;
+}
+
+/* Add styles for the selected state */
+.selected {
+  background-color: #000d57;
+  color: #ffe600; 
+}
+
+
+
+.room__grid {
+    flex-wrap: wrap;
+    margin-top: 10px;
+    height: 800px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #55555500;
+}
+body{
+  background: linear-gradient(120deg, rgba(14, 187, 255, 0.678) 10%, rgba(2, 5, 177, 0.3) 30%, rgba(4, 0, 219, 0.555) 90%), url("Main PICTURE.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: background 1s ease;
+}  
+.room__card {
+    display: flex;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    background-color: #ffffff42;
+    
+    padding: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    justify-content: space-between;
+    height: 700px;
+    width: 600px;
+    box-sizing: border-box;
+    min-width: 100%;
+  }
+  
+  .containerleft img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+    border-radius: 20px;
+  }
+  
+  .room__card__details {
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .room__more-details {
+    flex: 1;
+  }
+  .room__list-inside {
+    flex: 0 0 200px; /* Fixed width for the room list */
+    background-color: #00d9ff00;
+    padding: 10px;
+    border-radius: 8px;
+    width: 90%;
+    float: right;
+    height: auto;
+  }
+  .room__card__details h4 {
+    margin: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+  }
+  
+  .room__card__details h3 {
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  
+  .navbar {
+    width: 100%;
+    background-color: #001679bb;
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it's always on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .nav-content h2{
+    font-family: "Playfair Display", serif;
+  }
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.logo img {
+  height: 50px; 
+  width: auto; 
+  background-size: cover;
+}
+.nav-links button{
+  background-color: #00177c3f;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 10px;
+}
+.nav-links button:hover{
+  background-color: #1a0057;
+  color: rgb(255, 216, 41);
+}
+.slider-wrapper {
+  position: relative;
+    width: 700px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Basic styling for the slider */
+.slider {
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 700px;
+  width: 600px; /* Full width of the container */
+  overflow: hidden; /* Hide overflow to show only one card at a time */
+}
+
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;  /* Add transition for smooth sliding */
+   /* Ensure all slides are aligned side-by-side */
+}
+
+/* Each slide takes the full width of the slider */
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  font-size: 24px;
+}
+
+/* Next and previous buttons */
+.prev, .next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev {
+  margin-right: 10px;
+}
+
+.next {
+  margin-left: 10px;
+}
+.text-center{
+  color: white;
+  font-family: arial;
+}
+/* Ensure the slider content does not stretch beyond the button area */
+
+.calendaryo{
+    flex: 1; 
+    max-width: 800px; /* Maximum width */
+    height: 800px;
+    background-color: #00000000;
+    display: flex;
+    
+    justify-content: center;
+    margin-top: 60px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.room-calendar {
+  margin: 20px 0;
+}
+
+.room-calendar h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.calendar-container {
+  float: right;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#calendar {
+  width: 100%;  /* Full width */
+  height: 100%; /* Full height */
+  max-height: 100%; /* Prevent it from growing beyond its container */
+  overflow-y: auto;  /* If there's overflow, allow vertical scrolling */
+  box-sizing: border-box;
+}
+
+.room-list {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 50%;
+}
+body
+.room-list h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.room-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1em;
+  background-color: #4949496e;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+}
+
+.room-btn:hover {
+  background-color: #000d57;
+  color: #ffe600;
+}
+.calendar-btn {
+  margin-top: 20px;
+  background-color: #00000057;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.calendar-btn:hover {
+  background-color: #000d57;
+  color: #ffd900;
+}
+.calendar-btn-wrapper {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  margin-top: 20px; /* Adds space between the calendar and the button */
+}
+.availability {
+  flex: 2;
+  background-color: #000000;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.availability h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.month {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #001679; /* Dark blue color */
+}
+
+.month h4 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.day {
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.day-header {
+  background-color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.calendar-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.room-list {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.room-list h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
